@@ -5,4 +5,8 @@ router.get("/", (req, res) => {
     res.send("About route")
 })
 
+router.get('/me', (req, res) => {
+    res.send("Me route")
+})
+
 module.exports = router
