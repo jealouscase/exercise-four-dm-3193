@@ -4,12 +4,11 @@ const app = express()
 const port = 4000
 const router = express.Router()
 
-const indexRouter = require('./routes/index')
-const aboutRouter = require('./routes/about')
+const indexRoute = require('./routes/index')
+const aboutRoute = require('./routes/about')
 
-app.use('/', router)
-app.use('/index', indexRouter)
-app.use('/about', aboutRouter)
+app.use('/', indexRoute)
+app.use('/about', aboutRoute)
 
 app.get('/', (req, res) => {
     res.send('Hello World!')
